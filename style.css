@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Almarai', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    flex-direction: column;
+    padding: 20px;
+}
+.continer {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h1 span:first-of-type {
+    color: #fea950;
+}
+h1 span:last-of-type {
+    color: #52a0f2;
+}
+
+.mine-scren , .mine-loader ,.mine-resolt , .mine-start {
+    min-width: 60%;
+    height: 100%;
+    border:3px dashed #908c8c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #232323;
+}
+
+
+@media (max-width : 767px) {
+    .mine-scren , .mine-loader ,.mine-resolt ,.mine-start {
+        min-width: 90%;
+        height: 50%;
+    }
+}
+.mine-scren #upload ,.mine-resolt button , .mine-start button ,#Upload-lable{
+    outline: none;
+    border: none;
+    padding: 10px 50px;
+    background-color: #52a0f2;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.mine-scren #upload:hover ,.mine-resolt button:hover ,#Upload-lable:hover , .mine-start button:hover{
+    transform: scale(0.9);
+}
+.mine-scren p {
+    margin-top: 20px;
+    color: #908c8c;
+}
+.hidden {
+    display :none ;
+}
+
+/*  loader  */
+
+.loader, .loader:before, .loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation-fill-mode: both;
+    animation: bblFadInOut 1.8s infinite ease-in-out;
+  }
+  .loader {
+    color: #FFF;
+    font-size: 7px;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+  }
+  .loader:before,
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  .loader:before {
+    left: -3.5em;
+    animation-delay: -0.32s;
+  }
+  .loader:after {
+    left: 3.5em;
+  }
+  
+  @keyframes bblFadInOut {
+    0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+    40% { box-shadow: 0 2.5em 0 0 }
+  }
+
+  .loader.size {
+    transform: scale(1.5) ;
+    position: relative;
+    top: -20px;
+}
+
+
+  /* // loader  // */
+
+
+
+#Upload {
+    display: none;
+}
+
+
+
+.mine-resolt .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0 0 ;
+}
+
+.mine-resolt .mages ,.mine-start .mages {
+    width: 70%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+.mine-resolt .mages img  , .mine-start .mages img{
+    max-width: 70%;
+}
+.mine-resolt .mages  #before-small{
+    position: absolute;
+    width: 60px;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width : 767px) {
+    .mine-resolt .mages  , .mine-start .mages{
+        width: 80%;
+        height: 70%;
+        margin-top: 10px;
+    }
+    .mine-resolt .mages img , .mine-start .mages img {
+        max-width: 80%;
+    }
+    #Upload-Another , #Download{
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+    }
+}
+
+#by {
+    font-size: 14px;
+    position: relative;
+    bottom: -30px;
+    color: #908c8c;
+}
+
+@media (max-width : 767px) {
+    #by {
+        font-size: 12px;
+        position: absolute;
+        bottom: 10px;
+    }
+}
